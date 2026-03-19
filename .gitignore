@@ -1,0 +1,9 @@
+.DS_Store
+*.tmp
+*.rds
+temp.R
+channels.jpg
+!docs/channels.jpg
+
+/.quarto/
+**/*.quarto_ipynb
