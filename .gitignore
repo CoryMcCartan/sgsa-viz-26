@@ -7,7 +7,6 @@
 !docs/*.svg
 !docs/**/*.svg
 slides.qmd
-temp.R
 
 /.quarto/
 **/*.quarto_ipynb
