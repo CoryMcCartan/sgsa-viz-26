@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.23">
 
   <meta name="author" content="Cory McCartan">
-  <meta name="dcterms.date" content="2026-03-18">
+  <meta name="dcterms.date" content="2026-03-19">
   <title>Advanced Tools in Data Visualization</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -210,7 +210,7 @@ Cory McCartan
 </div>
 </div>
 
-  <p class="date">March 18, 2026</p>
+  <p class="date">March 19, 2026</p>
 </section>
 <section>
 <section id="principles" class="title-slide slide level1 center">
@@ -325,29 +325,35 @@ Cory McCartan
 <span id="cb1-43"><a href=""></a>        <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">25</span>),</span>
 <span id="cb1-44"><a href=""></a>        <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span>
 <span id="cb1-45"><a href=""></a>    ) <span class="sc">+</span></span>
-<span id="cb1-46"><a href=""></a>    <span class="fu">scale_x_continuous</span>(<span class="st">"Day of year"</span>, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">360</span>, <span class="dv">90</span>)) <span class="sc">+</span></span>
-<span id="cb1-47"><a href=""></a>    <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-46"><a href=""></a>    <span class="fu">scale_x_continuous</span>(<span class="st">"Day of year"</span>, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">360</span>, <span class="dv">90</span>), <span class="at">expand=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb1-47"><a href=""></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb1-48"><a href=""></a>    <span class="fu">theme</span>(</span>
 <span id="cb1-49"><a href=""></a>        <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>(),</span>
 <span id="cb1-50"><a href=""></a>        <span class="at">panel.grid.minor.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb1-51"><a href=""></a>        <span class="at">legend.direction =</span> <span class="st">"vertical"</span>,</span>
-<span id="cb1-52"><a href=""></a>        <span class="at">legend.position =</span> <span class="st">"inside"</span>,</span>
-<span id="cb1-53"><a href=""></a>        <span class="at">legend.key.width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"cm"</span>),</span>
-<span id="cb1-54"><a href=""></a>        <span class="at">legend.key.height =</span> <span class="fu">unit</span>(<span class="fl">0.25</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>, <span class="st">"npc"</span>),</span>
-<span id="cb1-55"><a href=""></a>        <span class="at">legend.title.position =</span> <span class="st">"left"</span>,</span>
-<span id="cb1-56"><a href=""></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">hjust=</span><span class="dv">1</span>, <span class="at">vjust=</span><span class="dv">1</span>), </span>
-<span id="cb1-57"><a href=""></a>        <span class="at">legend.justification.inside =</span> <span class="st">"center"</span>,</span>
-<span id="cb1-58"><a href=""></a>        <span class="at">legend.position.inside =</span> <span class="fu">c</span>(<span class="dv">5</span> <span class="sc">/</span> <span class="dv">6</span>, <span class="dv">1</span> <span class="sc">/</span> <span class="dv">6</span>),</span>
-<span id="cb1-59"><a href=""></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-51"><a href=""></a>        <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-52"><a href=""></a>        <span class="at">panel.spacing.x =</span> <span class="fu">unit</span>(<span class="dv">0</span>, <span class="st">"cm"</span>),</span>
+<span id="cb1-53"><a href=""></a>        <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-54"><a href=""></a>        <span class="at">legend.direction =</span> <span class="st">"vertical"</span>,</span>
+<span id="cb1-55"><a href=""></a>        <span class="at">legend.position =</span> <span class="st">"inside"</span>,</span>
+<span id="cb1-56"><a href=""></a>        <span class="at">legend.key.width =</span> <span class="fu">unit</span>(<span class="fl">0.0625</span>, <span class="st">"npc"</span>),</span>
+<span id="cb1-57"><a href=""></a>        <span class="at">legend.key.height =</span> <span class="fu">unit</span>(<span class="fl">0.25</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>, <span class="st">"npc"</span>),</span>
+<span id="cb1-58"><a href=""></a>        <span class="at">legend.title.position =</span> <span class="st">"left"</span>,</span>
+<span id="cb1-59"><a href=""></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">hjust=</span><span class="dv">1</span>, <span class="at">vjust=</span><span class="dv">1</span>), </span>
+<span id="cb1-60"><a href=""></a>        <span class="at">legend.justification.inside =</span> <span class="st">"center"</span>,</span>
+<span id="cb1-61"><a href=""></a>        <span class="at">legend.position.inside =</span> <span class="fu">c</span>(<span class="dv">5</span> <span class="sc">/</span> <span class="dv">6</span>, <span class="dv">1</span> <span class="sc">/</span> <span class="dv">6</span>),</span>
+<span id="cb1-62"><a href=""></a>    )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+<p><img data-src="slides_files/figure-revealjs/unnamed-chunk-1-1.svg"></p>
 </figure>
 </div>
 </div>
 </div>
+</section>
+<section id="section-1" class="slide level2" data-visibility="uncounted" data-background-image="acrs.svg" data-background-size="contain">
+<h2></h2>
 
 </section></section>
     </div>

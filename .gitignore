@@ -1,9 +1,13 @@
 .DS_Store
 *.tmp
 *.rds
+*.jpg
+*.svg
+!docs/*.jpg
+!docs/*.svg
+!docs/**/*.svg
+slides.qmd
 temp.R
-channels.jpg
-!docs/channels.jpg
 
 /.quarto/
 **/*.quarto_ipynb
